@@ -179,14 +179,14 @@ import React, { useState, useEffect } from 'react';
       return (
         <div className="flex flex-col min-h-screen bg-gradient-radial text-white">
           <header className="bg-secondary-dark p-4 flex justify-between items-center">
-            <div className="flex items-center">
-              <span className="mr-4 sm:hidden">
+            <div className="flex items-center flex-wrap sm:flex-nowrap">
+              <span className="mr-4 flex items-center mb-1 sm:mb-0">
                 <Calendar className="inline-block mr-1 text-primary-light" size={18} />
-                {new Date().toLocaleDateString()}
+                <span className="ml-1 text-sm sm:text-base">{new Date().toLocaleDateString()}</span>
               </span>
-              <span className="sm:hidden">
+              <span className="flex items-center">
                 <Hash className="inline-block mr-1 text-primary-light" size={18} />
-                {formData.ticketNumber}
+                <span className="ml-1 text-sm sm:text-base">{formData.ticketNumber}</span>
               </span>
             </div>
             <nav className="flex space-x-4">
